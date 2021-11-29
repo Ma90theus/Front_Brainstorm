@@ -9,40 +9,35 @@
   <title>Frontend Mentor | Todo app | Brainstomr</title>
 </head>
 <body>
+<main>
+  <!--Cabeçalho-->
   <header>
     <h1>Todo</h1>
   </header>
+
+  <!--Onde digitarei os itens-->
   <div class="todo_novo-item">
-    <input type="text" placeholder="Crie uma nova tarefa" id="text">
+    <input type="text" placeholder="Crie uma nova tarefa" id="novoItem">
   </div>
 
-<main>
-  <div class = "todo_list">
-    <label class = "item_todo">
-      <input type="checkbox">
-      Digitar
-      <input type="button" value="X">
-    </label>
-    <div class = "todo_list">
-      <label class = "item_todo">
-        <input type="checkbox">
-        Pintar a casa
-        <input type="button" value="X">
-      </label>
+<!--Tarefas Lista -->
+  <div class = "todo_list" id = "todoList">
+    <!--Aqui é onde as tarefas serão criadas-->
     </div>
   </div>
 
-  <div>
-    <span> 0 itens restantes</span>
-    <input type="button" value=""> Clear Completed
-  </div>
-  <ul>
-    <li> <input type="button" value=""> All</li>
-    <li><input type="button" value=""> Active</li>
-    <li><input type="button" value=""> Completed</li>
+  <div class = contador_todo  id = "contadorTodo">
 
-  </ul>
+  </div>
+  <form action="" id = 'funcoes'>
+    <ul>
+      <li><label><input type="button" name =" todos" > Todos</label></li>
+      <li><label><input type="button" name = "ativos"  > Ativos</label></li>
+      <li><label> <input type="button" name = "completos"> Completos</label></li>
+    </ul>
+  </form>
 </main>
+
   <footer>
     <CIte>Arraste e Solte</CIte>
   </footer>

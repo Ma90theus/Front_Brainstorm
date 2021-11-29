@@ -16,3 +16,13 @@ li{
    text-align: left;
    padding: 12px;
 }
+label{
+   justify-content: center;
+   display: flex;
+   background-color: grey;
+   margin-top: 20px;
+}
+label div{
+   padding-right: 40px;
+   padding-left: 40px;
+}
