@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swapp');
+:root {
+  --body-color: #161722; 
+  --todobox-color: #25273c;
+  --todotext-color: #cacde8;
+  --todotext-color-hover: #e4e5f1;
+  --color-one: #777a92;
+  --color-two: #4d5066;
+  --color-three: #393a4c;
+  --color-outline: #FFFFFF;
+  --shadow: transparent;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+.background { /*dark*/
+  background-color: var(--body-color);
+  background-image: url("/imgs/bg-desktop-dark.jpg"); 
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+body { /*body com tema dark*/
+  background-color: var(--body-color);
+  font-family: "Josefin Sans",sans-serif;
+  display: flex;
+  font-size: clamp(1.75rem,2vw,1.125rem);
+  justify-content: center;
+  padding: clamp(3rem,10vw,4.875rem) 1.5rem;
+  position: relative;
+}
+.heading { /*antes do h2*/
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  Width:540px ;
+  Height: 40px;
+}
+.visually-hidden { /*ocultar*/
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.heading_title { /*to do h2*/
+  color: #ffffff;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  letter-spacing: 6px;
+  text-transform: uppercase; /*caixa alta*/
+}
+.colormodes { /*radio button*/
+  border: none;
+  height: clamp(1.75rem, 5vw, 2.125rem);
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+.colormodes_input {
+  width: 20px;
+  margin-right: 12px;
+  opacity: 0; /*0*/
+  right: 0;
+}
+.colormodes_dark{
+  background: url(/imgs/icon-moon.svg) no-repeat 50%;
+  height: clamp(1.25rem,3vw,1.625rem);
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: clamp(1.25rem,3vw,1.625rem);
+}
+.colormodes_light{
+    background: url(/imgs/icon-sun.svg) no-repeat 50%;
+    height: clamp(1.25rem,3vw,1.625rem);
+    position: absolute;
+    right: 43px;
+    top: 1px;
+    width: clamp(1.25rem,3vw,1.625rem);
+}
+.form_todo { /*dark imput*/
+  background-color: var(--todobox-color);
+  border-radius: 4px;
+  background-image: radial-gradient(clamp(1.125rem, 2.8vw, 1.5rem) circle at clamp(1.75rem, 3vw, 2.125rem) clamp(1.5rem, 3vw, 2rem), var(--todobox-color) 50%, transparent 51%), radial-gradient(clamp(1.25rem, 3vw, 1.625rem) circle at clamp(1.75rem, 3vw, 2.125rem) clamp(1.5rem, 3vw, 2rem), var(--color-three) 50%, transparent 51%); /*circulozinho*/
+  border: none;  /*circulozinho*/
+  color: var(--todotext-color); /*circulozinho*/
+  height: clamp(3rem, 10vw, 4rem);
+  padding-left: clamp(3.25rem, 6vw, 4.5rem);
+  width: 100%;
+  font-family: "Josefin Sans",sans-serif;
+  font-size: clamp(.75rem,2vw,1.125rem);
+  line-height: normal;
+  margin-bottom: 15px ;
+ }
+ .estrutura_lista{
+  background-color: var(--todobox-color);
+  border-radius: 4px;
+  list-style: none;
+  font-size: 14px;
+  display: flex;
+ }
+ .botoes {
+   padding: 0px 27px 0 27px;
+ }
+ /*ul{
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+ }*/
