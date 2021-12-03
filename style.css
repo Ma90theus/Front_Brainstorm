@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swapp');
+:root {
+--body-color: #161722; 
+--todobox-color: #25273c;
+--todotext-color: #cacde8;
+--todotext-color-hover: #e4e5f1;
+--color-one: #777a92;
+--color-two: #4d5066;
+--color-three: #393a4c;
+--color-outline: #FFFFFF;
+--shadow: transparent;
+}
+/*.lightmode {
+--body-color: #F9F9F9;
+--todobox-color: #FFFFFF;
+--todotext-color:#4d5066;
+--color-two: #cacde8;
+--color-three: #d8d9df;
+--color-outline: #484b6a;
+--shadow: #8f8f8f1a;
+}*/
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html {
+box-sizing: border-box;
+font-size: 100%;
+
+}
+.background { /*dark*/
+background-color: var(--body-color);
+background-image: url("./imgs/bg-desktop-dark.jpg"); 
+background-repeat: no-repeat;
+background-position: right top;
+}
+body { /*body com tema dark*/
+background-color: var(--body-color);
+font-family: "Josefin Sans",sans-serif;
+display: flex;
+font-size: clamp(1.75rem,2vw,1.125rem);
+justify-content: center;
+padding: clamp(3rem,10vw,4.875rem) 1.5rem;
+position: relative;
+}
+.heading { /*antes do h2*/
+align-items: center;
+display: flex;
+justify-content: space-between;
+margin-bottom: 2rem;
+Width:540px ;
+Height: 40px;
+}
+.visually-hidden { /*ocultar*/
+border: 0;
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+width: 1px;
+}
+.heading_title { /*to do h2*/
+color: #ffffff;
+font-size: clamp(1.75rem, 5vw, 2.5rem);
+letter-spacing: 6px;
+text-transform: uppercase; /*caixa alta*/
+}
+/*formatação dos itens da lista de tarefas*/
+.todo_list{
+background-color:var(--todobox-color);
+margin-top: 10px;
+border-radius: 4px;
+}
+.item_todo{
+border-bottom: 1px solid #393a4c;
+border-bottom: 1px solid var(--color-three);
+display: flex;
+font-size: clamp(.75rem,2vw,1.125rem);
+width: 100%;
+height: clamp(3.3125rem,5vw,4rem);
+justify-content: space-between;
+padding: clamp(1.25rem,3vw,1.5rem);/*20px 15px 5px 15px*/
+color: var(--todotext-color);
+}
+.item_todo > input[type='text'] {
+border: none;
+width: 80%;
+font: inherit;
+}
+.item_todo > input[type='button'],
+.item_todo > input[type='checkbox'] {
+border: none;
+font: inherit;
+
+}
+.colormodes { /*radio button*/
+border: none;
+height: clamp(1.75rem, 5vw, 2.125rem);
+margin: 0;
+overflow: hidden;
+padding: 0;
+position: relative;
+}
+.colormodes_input {
+width: 20px;
+margin-right: 12px;
+opacity: 0; 
+right: 0;
+}
+.colormodes_dark{
+background: url(./imgs/icon-moon.svg) no-repeat 50%;
+height: clamp(1.25rem,3vw,1.625rem);
+position: absolute;
+right: 1px;
+top: 1px;
+width: clamp(1.25rem,3vw,1.625rem);
+}
+.colormodes_light{
+background: url(./imgs/icon-sun.svg) no-repeat 50%;
+height: clamp(1.25rem,3vw,1.625rem);
+position: absolute;
+right: 43px;
+top: 1px;
+width: clamp(1.25rem,3vw,1.625rem);
+}
+.form_todo { /*dark imput*/
+background-color: var(--todobox-color);
+border-radius: 4px;
+background-image: radial-gradient(clamp(1.125rem, 2.8vw, 1.5rem) circle at clamp(1.75rem, 3vw, 2.125rem) clamp(1.5rem, 3vw, 2rem), var(--todobox-color) 50%, transparent 51%), radial-gradient(clamp(1.25rem, 3vw, 1.625rem) circle at clamp(1.75rem, 3vw, 2.125rem) clamp(1.5rem, 3vw, 2rem), var(--color-three) 50%, transparent 51%); /*circulozinho*/
+border: none;  /*circulozinho*/
+color: var(--todotext-color); /*circulozinho*/
+height: clamp(3rem, 10vw, 4rem);
+padding-left: clamp(3.25rem, 6vw, 4.5rem);
+width: 100%;
+font-family: "Josefin Sans",sans-serif;
+font-size: clamp(.75rem,2vw,1.125rem);
+line-height: normal;
+margin-bottom: 15px ;
+}
+.estrutura_lista{
+margin: 10px 0px 10px 0px;
+background-color: var(--todobox-color);
+border-radius: 4px;
+list-style: none;
+font-size: 16px;
+display: flex;
+color: var(--todotext-color);
+}
+#contadorTodo{
+padding-left: 14px;
+}
+.botoes {
+padding: 10px 27px 0 27px;
+}

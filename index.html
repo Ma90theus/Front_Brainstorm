@@ -1,36 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+        <title>To Do App</title>
+        <link rel="shortcut icon" type="image/png" href="imgs\favicon-32x32.png">
+        <link rel="stylesheet" href="style.css">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">  Importa a fonte-->
+    </head>
+    <body class="background">
+        <div id="root">
+            <main>
+                <div class="heading">
+                    <h2 class="heading_title">ToDo</h2>
+                    <!--Selecionando o Tema-->
+                    <fieldset class="colormodes" id="tema">
+                        <legend class="visually-hidden">aparencia</legend>
+                        <!-- Modo Claro-->
+                        <input class="colormodes_input" type="radio" id="lightmode" name="colormode" aria-label="lightmode">
+                        <label for="lightmode" class="colormodes_light"></label>
+                        <!-- Modo Escuro-->
+                        <input class="colormodes_input" type="radio" id="darkmode" name="colormode" aria-label="darkmode"
+                            value="darkmode" checked="">
+                        <label for="darkmode" class="colormodes_dark"></label>
+                    </fieldset>
+                </div>
+                <!--Campo para adicionar os itens da Lista-->
+                <div class="todo_novo-item">
+                    <input type="text" class="form_todo" id="novoItem" placeholder="Adicionar tarefa..." autocomplete="off">
+                </div>
+                <!--Tarefas-->
+                <div class="todo_list" id="todoList">
+                    <!--Aqui é onde as tarefas serão criadas-->
+                </div>
+                <!--Botões, Filtro de tarefas e Contador-->
+                <form class="estrutura_lista" action="" id="funcoes">
+                    <!--Botões-->
+                    <ul class="estrutura_lista">
+                        <!--Label Contador das Tarefas-->
+                        <div class="estrutura_lista" id="contadorTodo">
+                        </div>
+                        <li class="botoes"><label>Todos</label></li>
+                        <li class="botoes"><label>Ativos</label></li>
+                        <li class="botoes"><label>Concluidos</label></li>
+                        <li class="botoes"><label>Limpar Concluidos</label></li>
+                    </ul>
+                </form>
+            </main>             
+            <script src="aplicativo.js"> </script>
+        </div>
+    </body>
 </html>
