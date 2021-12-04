@@ -31,7 +31,7 @@ font-size: 100%;
 }
 .background { /*dark*/
 background-color: var(--body-color);
-background-image: url("./imgs/bg-desktop-dark.jpg"); 
+background-image: url("./images/bg-desktop-dark.jpg"); 
 background-repeat: no-repeat;
 background-position: right top;
 }
@@ -110,7 +110,7 @@ opacity: 0;
 right: 0;
 }
 .colormodes_dark{
-background: url(./imgs/icon-moon.svg) no-repeat 50%;
+background: url(./images/icon-moon.svg) no-repeat 50%;
 height: clamp(1.25rem,3vw,1.625rem);
 position: absolute;
 right: 1px;
@@ -118,7 +118,7 @@ top: 1px;
 width: clamp(1.25rem,3vw,1.625rem);
 }
 .colormodes_light{
-background: url(./imgs/icon-sun.svg) no-repeat 50%;
+background: url(./images/icon-sun.svg) no-repeat 50%;
 height: clamp(1.25rem,3vw,1.625rem);
 position: absolute;
 right: 43px;
